@@ -1,0 +1,12 @@
+<div>
+	<h3>User info</h3>
+	<%= form_for(@user) do |f| %>
+	    <p>Name</p>
+	    <%= f.text_field :name %>
+	    <p>Image</p>
+	    <% f.attachment_field :profile_image, placeholder: "画像を選択" %>
+	    <p>Introduction</p>
+	    <%= f.text_field :intrroduction %>
+	    <%= f.submit "Update User" %>
+	<% end %>
+</div>

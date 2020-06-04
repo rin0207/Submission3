@@ -1,0 +1,26 @@
+<main>
+	<% if @book.errors.any? %>
+	<% render %>
+	<div>
+		<%= render 'books/userinfo', : %>
+	</div>
+	<div>
+		<%= render 'books/newbook', : %>
+	</div>
+	<div>
+		<h3>Books</h3>
+		<table>
+			<tr class="books-list">
+				<th>Title</th>
+				<th>Opinion</th>
+			</tr>
+			<% @books.each do |book| %>
+			<tr class="books-body">
+				<td></td>
+				<td><%= link_to book.title,  %></td>
+				<td><%= link_to book.body,  %></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+</main>
