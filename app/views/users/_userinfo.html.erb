@@ -1,0 +1,19 @@
+<div>
+	<h3>User info</h3>
+	<div>
+		<%= attachment_image_tag user, :profile_image, :fill, 60, 60, class:"profile-thumb", fallback:"no_image.jpg" %>
+	</div>
+	<table class="table">
+		<tr class="name-list">
+			<td>name</td>
+			<td><%= user.name %></td>
+		</tr>
+		<tr>
+			<td>introduction</td>
+			<td><%= user.introduction %></td>
+		</tr>
+	</table>
+	<div class="row">
+	<%= link_to "Edit", edit_user_path(user.id), {class: "col-xs-12 btn btn-defalut glyphicon glyphicon-wrench"} %>
+    </div>
+</div>
